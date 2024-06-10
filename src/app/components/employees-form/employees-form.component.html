@@ -1,0 +1,33 @@
+<h1>Book Finder</h1>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Title</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="title" placeholder="The Great Gatsby" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Author</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="author" placeholder="F. Scott Fitzgerald" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Genre</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <input nz-input formControlName="genre" placeholder="Fiction" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Year Published</nz-form-label>
+    <nz-form-control [nzSpan]="12">
+      <nz-input-number formControlName="yearPublished" [nzMin]="0" [nzStep]="1"></nz-input-number>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+      <button nz-button nzType="primary">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
